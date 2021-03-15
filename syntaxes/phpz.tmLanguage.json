@@ -1,0 +1,90 @@
+{
+  "name": "phpz",
+  "scopeName": "text.html.phpz",
+  "injectionSelector": "L:text.html",
+  "patterns": [
+    {
+      "include": "#phpz-block"
+    },
+    {
+      "include": "#phpz-control"
+    },
+    {
+      "include": "#phpz-echo"
+    }
+  ],
+  "repository": {
+    "phpz-block": {
+      "begin": "{(php)}",
+      "beginCaptures": {
+        "0": {
+          "name": "phpz-block-begin"
+        },
+        "1": {
+          "name": "keyword.control.php"
+        }
+      },
+      "end": "{(/php)}",
+      "endCaptures": {
+        "0": {
+          "name": "phpz-block-end"
+        },
+        "1": {
+          "name": "keyword.control.php"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.php"
+        }
+      ]
+    },
+    "phpz-control": {
+      "patterns": [
+        {
+          "match": "\\s(\\$[^}\\s]+)\\s?",
+          "name": "phpz-control-variable",
+          "captures": {
+            "1": {
+              "name": "variable.other.php"
+            }
+          }
+        },
+        {
+          "match": "{(/?(?:if|foreach|else)\\b)",
+          "name": "phpz-control-line",
+          "captures": {
+            "1": {
+              "name": "keyword.control.php"
+            }
+          }
+        }
+      ]
+    },
+    "phpz-echo": {
+      "patterns": [
+        {
+          "name": "phpz-variable",
+          "match": "{(\\$[^}\\s]+)}",
+          "captures": {
+            "1": {
+              "name": "variable.other.php"
+            }
+          }
+        },
+        {
+          "name": "phpz-include",
+          "match": "{(template):([^}\\s]+)}",
+          "captures": {
+            "1": {
+              "name": "constant.language.php"
+            },
+            "2": {
+              "name": "variable.other.php"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

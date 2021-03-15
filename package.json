@@ -1,0 +1,44 @@
+{
+  "name": "z-blog-color",
+  "displayName": "z-blog-color",
+  "description": "Z-BlogPHP 模板语法高亮插件",
+  "version": "0.0.1",
+  "author": {
+    "name": "wdssmq",
+    "email": "wdssmq@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/wdssmq/z-blog-color/issues",
+    "email": "wdssmq@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wdssmq/z-blog-color.git"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "text.html.phpz",
+        "path": "./syntaxes/phpz.tmLanguage.json",
+        "injectTo": [
+          "text.html"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "yl2js": "npx js-yaml syntaxes/phpz.tmLanguage.yaml > syntaxes/phpz.tmLanguage.json"
+  },
+  "note": {
+    "js2yl3eav": "npx js-yaml syntaxes/phpz.tmLanguage.json > syntaxes/phpz.tmLanguage.yaml"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.0.0"
+  }
+}
