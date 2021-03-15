@@ -10,6 +10,6 @@ Z-BlogPHP 模板语法高亮插件 For VSCode
 
 ## 效果
 
-![001.png](doc/001.png "001.png")
+![001.png](https://raw.githubusercontent.com/wdssmq/z-blog-color/master/doc/001.png "001.png")
 
-![002.png](doc/002.png "002.png")
+![002.png](https://raw.githubusercontent.com/wdssmq/z-blog-color/master/doc/002.png "002.png")
