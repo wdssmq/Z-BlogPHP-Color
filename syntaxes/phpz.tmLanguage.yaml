@@ -23,7 +23,7 @@ repository:
       - include: source.php
   phpz-control:
     patterns:
-      - match: '\s(\$[^}\s]+)\s?'
+      - match: '[\s\({!](\$[^}\s]+)[\s\)\}]?'
         name: phpz-control-variable
         captures:
           "1":
