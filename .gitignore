@@ -3,3 +3,4 @@ node_modules
 *.bak.json
 *.code-workspace
 .history
+/syntaxes/*.json
