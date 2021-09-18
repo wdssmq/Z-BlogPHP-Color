@@ -1,4 +1,4 @@
-# Z-BlogPHPColor
+# Z-BlogPHP-Color
 
 Z-BlogPHP 模板语法高亮插件 For VSCode
 
