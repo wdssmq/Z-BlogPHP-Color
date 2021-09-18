@@ -47,3 +47,10 @@ repository:
             name: constant.language.php
           "2":
             name: variable.other.php
+      - name: phpz-module
+        match: '{(module):([^}\s]+)}'
+        captures:
+          "1":
+            name: constant.language.php
+          "2":
+            name: variable.other.php
