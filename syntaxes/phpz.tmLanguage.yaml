@@ -36,7 +36,7 @@ repository:
   phpz-echo:
     patterns:
       - name: phpz-variable
-        match: '{(\$[^}\s]+)}'
+        match: '{(\$[^}\s=]+)[^}]*}'
         captures:
           "1":
             name: variable.other.php
