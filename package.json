@@ -3,6 +3,7 @@
   "displayName": "Z-BlogPHP-Color",
   "description": "Z-BlogPHP 模板语法高亮插件",
   "version": "0.0.1",
+  "publisher": "wdssmq",
   "author": {
     "name": "wdssmq",
     "email": "wdssmq@qq.com"
