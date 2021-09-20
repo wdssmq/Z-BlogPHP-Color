@@ -16,14 +16,48 @@ wdssmq/snippets: Z-Blog 编辑器代码提示片段：
 
 [https://github.com/wdssmq/snippets](https://github.com/wdssmq/snippets "wdssmq/snippets: Z-Blog 编辑器代码提示片段")
 
-## 二维码
-
-![qr-ali](https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-ali.png "qr-ali")
-![qr-wx](https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-wx.png "qr-wx")
-![qr-qq](https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-qq.png "qr-qq")
-
 ## 效果
 
 ![001.png](https://cdn.jsdelivr.net/gh/wdssmq/z-blog-color@master/doc/001.png "001.png")
 
 ![002.png](https://cdn.jsdelivr.net/gh/wdssmq/z-blog-color@master/doc/002.png "002.png")
+
+## 支持
+
+<table border="1">
+  <tr>
+    <td>
+      <img
+        src="https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-ali.png"
+        alt="qr-ali"
+        title="qr-ali"
+      />
+    </td>
+    <td>
+      <img
+        src="https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-wx.png"
+        alt="qr-wx"
+        title="qr-wx"
+      />
+    </td>
+    <td>
+      <img
+        src="https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/qr-qq.png"
+        alt="qr-qq"
+        title="qr-qq"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <a
+        target="_blank"
+        href="https://afdian.net/@wdssmq"
+        title="沉冰浮水正在创作和 z-blog 相关或无关的各种有用或没用的代码 | 爱发电"
+        ><img
+          src="https://cdn.jsdelivr.net/gh/wdssmq/wdssmq@main/doc/afdian.png"
+          alt="爱发电"
+      /></a>
+    </td>
+  </tr>
+</table>
