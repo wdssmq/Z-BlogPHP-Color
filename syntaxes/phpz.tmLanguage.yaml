@@ -8,13 +8,13 @@ patterns:
   - include: "#phpz-echo"
 repository:
   phpz-block:
-    begin: "{(php)}"
+    begin: "^{(php)}"
     beginCaptures:
       "0":
         name: phpz-block-begin
       "1":
         name: keyword.control.php
-    end: "{(/php)}"
+    end: "^{(/php)}"
     endCaptures:
       "0":
         name: phpz-block-end
