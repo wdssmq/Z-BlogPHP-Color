@@ -7,56 +7,91 @@ patterns:
   - include: "#phpz-line-end"
   - include: "#phpz-echo"
 repository:
+
+  # {php}...{/php}
   phpz-block:
-    begin: "^{(php)}"
+    begin: ^({)(php)(})
     beginCaptures:
-      "0":
-        name: phpz-block-begin
       "1":
+        name: punctuation.section.embedded.begin.php
+      "2":
         name: keyword.control.php
-    end: "^{(/php)}"
+      "3":
+        name: punctuation.section.embedded.end.php
+    end: ^({)(\/)(php)(})
     endCaptures:
-      "0":
-        name: phpz-block-end
       "1":
+        name: punctuation.section.embedded.begin.php
+      "2":
+        name: punctuation.definition.tag.begin.html
+      "3":
         name: keyword.control.php
+      "4":
+        name: punctuation.section.embedded.end.php
     patterns:
       - include: source.php
+
+  # {if...}, {foreach...}, {else}, {elseif...}
   phpz-line-begin:
-    begin: "{(if|foreach|elseif)"
+    begin: ({)(if|foreach|else|elseif)
     beginCaptures:
-      "0":
-        name: phpz-line-begin
       "1":
+        name: punctuation.section.embedded.begin.php
+      "2":
         name: keyword.control.php
-    end: "}"
+    end: (})
+    endCaptures:
+      "1":
+        name: punctuation.section.embedded.end.php
     patterns:
       - include: source.php
+
+  # {/if}, {/foreach}
   phpz-line-end:
     patterns:
-      - match: '{(/?(?:if|foreach|else)\b)'
+      - match: ({)(\/)(if|foreach)(})
         name: phpz-line-end
         captures:
           "1":
+            name: punctuation.section.embedded.begin.php
+          "2":
+            name: punctuation.definition.tag.begin.html
+          "3":
             name: keyword.control.php
+          "4":
+            name: punctuation.section.embedded.end.php
+
+  # {$variable}, {template:...}, {module:...}
   phpz-echo:
     patterns:
       - name: phpz-variable
-        match: '{(\$[^}\s=]+)[^}]*}'
+        match: ({)(\\$[^}\\s=]+)[^}]*(})
         captures:
           "1":
+            name: punctuation.section.embedded.begin.php
+          "2":
             name: variable.other.php
+          "3":
+            name: punctuation.section.embedded.end.php
       - name: phpz-include
-        match: '{(template):([^}\s]+)}'
+        match: ({)(template):([^}\s]+)(})
         captures:
           "1":
-            name: constant.language.php
+            name: punctuation.section.embedded.begin.php
           "2":
+            name: constant.language.php
+          "3":
             name: variable.other.php
+          "4":
+            name: punctuation.section.embedded.end.php
       - name: phpz-module
-        match: '{(module):([^}\s]+)}'
+        match: ({)(module):([^}\s]+)(})
         captures:
           "1":
-            name: constant.language.php
+            name: punctuation.section.embedded.begin.php
           "2":
+            name: constant.language.php
+          "3":
             name: variable.other.php
+          "4":
+            name: punctuation.section.embedded.end.php
