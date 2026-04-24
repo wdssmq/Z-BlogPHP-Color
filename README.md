@@ -22,6 +22,21 @@ wdssmq/snippets: Z-Blog 编辑器代码提示片段：
 
 ![002.png](https://cdn.jsdelivr.net/gh/wdssmq/z-blog-color@master/doc/002.png "002.png")
 
+## 开发
+
+语法源文件位于 `syntaxes/phpz.tmLanguage.yaml`，JSON 产物 `dist/phpz.tmLanguage.json`。
+
+首次安装依赖：
+
+```bash
+pnpm install
+
+```
+
+调试插件时直接按 `F5`。
+
+当前工作区已配置 `watch grammar` 预启动任务，会监听 yaml 文件以自动生成 json。
+
 ## 支持
 
 <table border="1">
