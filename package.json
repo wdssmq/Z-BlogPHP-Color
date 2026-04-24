@@ -27,7 +27,7 @@
     "grammars": [
       {
         "scopeName": "text.html.phpz",
-        "path": "./syntaxes/phpz.tmLanguage.json",
+        "path": "./dist/phpz.tmLanguage.json",
         "injectTo": [
           "text.html"
         ]
@@ -35,12 +35,15 @@
     ]
   },
   "scripts": {
-    "yl2js": "npx js-yaml syntaxes/phpz.tmLanguage.yaml > syntaxes/phpz.tmLanguage.json"
+    "build": "js-yaml syntaxes/phpz.tmLanguage.yaml > dist/phpz.tmLanguage.json",
+    "watch": "chokidar \"syntaxes/phpz.tmLanguage.yaml\" -c \"npm run build\" --initial",
+    "dev": "npm run watch"
   },
   "note": {
     "js2yl3eav": "npx js-yaml syntaxes/phpz.tmLanguage.json > syntaxes/phpz.tmLanguage.yaml"
   },
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "js-yaml": "^4.0.0"
   }
 }
